@@ -8,6 +8,8 @@ import './styles.css';
 
 interface PageHeaderProps {
     title: string,
+    description?: string,
+    // o sinal de ? significa que a propriedade NÃO é obrigatória
 }
 
 const PageHeader: React.FunctionComponent<PageHeaderProps> = (props) => {
@@ -22,6 +24,10 @@ const PageHeader: React.FunctionComponent<PageHeaderProps> = (props) => {
 
             <div className="header-content">
                 <strong>{props.title}</strong>
+                
+                { props.description && 
+                    <p>{ props.description }</p> 
+                }
 
                 {props.children}
             </div>
