@@ -12,8 +12,7 @@ function TeacherForm() {
 
     const [scheduleItems, setScheduleItems] = useState(
         [
-            { week_day: 0, from: "8:00", to: "16:00" },
-            { week_day: 0, from: "10:00", to: "18:00" },
+            { week_day: 0, from: '', to: ''},
         ]);
 
     function addNewScheduleItem() {
